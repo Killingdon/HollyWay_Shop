@@ -1,0 +1,15 @@
+﻿<Window x:Class="HollyWay.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HollyWay"
+        mc:Ignorable="d"
+        Title="HollyWay_System" Height="450" Width="800">
+    <Grid Background="Aquamarine">
+        <TextBlock Text="Your Wellcome My Lord" Margin="301,57,229,324" FontSize="20"/>
+        <Button  Content="Войти в систему" Margin="152,188,486,187" Background="Blue" Click="Change"/>
+        <Button  Content="Выйти" Margin="503,188,135,187" Background="DarkRed" Click="Button_Click"/>
+
+    </Grid>
+</Window>

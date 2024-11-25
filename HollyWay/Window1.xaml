@@ -1,0 +1,63 @@
+﻿<Window x:Class="HollyWay.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HollyWay"
+        mc:Ignorable="d"
+        Title="HollyWay_System" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="0" Grid.Column="0" BorderBrush="Gray" BorderThickness="1" Padding="9">
+            <StackPanel Margin="0,0,0,-10">
+                <TextBlock Text="Add MatPlata" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Width="118" />
+                <ComboBox Name="CurrencySelector" Margin="0,0,0,10">
+                    <ComboBoxItem Content="ASUS" />
+                    <ComboBoxItem Content="Gigabyte" />
+                    <ComboBoxItem Content="MSI" />
+                    <ComboBoxItem Content="Intel" />
+                </ComboBox>
+                
+                <TextBox Name="PriceInput" Text="Price" Margin="0,0,0,10" />
+                <TextBox Name="CoutInput" Text="Count" Margin="0,0,0,10" Height="24" />
+                <Button Content="Add" Width="100" Click="AddMatPlat" />
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="0" Grid.Column="1" BorderBrush="Gray" BorderThickness="1" Padding="9">
+            <StackPanel Margin="0,0,0,-10">
+                <TextBlock Text="Add VideoCards" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Width="123" />
+                <ComboBox Name="CurrencySelection" Margin="0,0,0,10">
+                    <ComboBoxItem Content="GTX" />
+                    <ComboBoxItem Content="AMD" />
+                    <ComboBoxItem Content="Ryzen" />
+                </ComboBox>
+
+                <TextBox Name="PricesInput" Text="Price" Margin="0,0,0,10" />
+                <TextBox Name="CoutsInput" Text="Count" Margin="0,0,0,10" Height="24" />
+                <Button Content="Add" Width="100" Click="AddVideoCards" />
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column="0" BorderBrush="Gray" BorderThickness="1" Padding="10">
+            <StackPanel>
+                <TextBlock Text="All MatPlata" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Width="94" />
+                <ListBox Name="MatPlatasList" ItemsSource="{Binding MatPlatas}" Height="177" />
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="1" BorderBrush="Gray" BorderThickness="1" Padding="10">
+            <StackPanel>
+                <TextBlock Text="All VideCards" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Width="94" />
+                <ListBox Name="VideoCardsList" ItemsSource="{Binding VideoCards}" Height="177" />
+            </StackPanel>
+        </Border>
+    </Grid>
+    
+</Window>
